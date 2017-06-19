@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.057 sec <<< FAILURE! - in TestSuite
+simpleTestFail(basicTests.FirstClass)  Time elapsed: 0.012 sec  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertFalse(Assert.java:63)
+	at org.testng.Assert.assertFalse(Assert.java:73)
+	at enhancements.AssertLogger.AssertFalse(AssertLogger.java:26)
+	at basicTests.FirstClass.simpleTestFail(FirstClass.java:46)
+
