@@ -1,4 +1,4 @@
-basicTests\Factory.class
+config\AssertLogger.class
 basicTests\FirstClass.class
-enhancements\MainLogger.class
-enhancements\AssertLogger.class
+config\MainLogger.class
+basicTests\Factory.class

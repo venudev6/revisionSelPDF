@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite 1" verbose="1" >
     <parameter name="ifGrid" value="false"/>
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="edge"/>
     <test name="Test 1" >
         <classes>
             <class name="basicTests.FirstClass"/>
