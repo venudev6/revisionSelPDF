@@ -30,7 +30,6 @@ public class Factory{
     MainLogger log = null;
     AssertLogger assertLogger = null;
     String OSName = System.getProperty("os.name");
-    String geckoDriverWithVersion = "geckodriver-v0.17.0";
 
 
     public Factory() {
