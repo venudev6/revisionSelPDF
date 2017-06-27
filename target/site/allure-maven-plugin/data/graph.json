@@ -1,0 +1,21 @@
+[ {
+  "uid" : "bfd0bf2769bd2cb3",
+  "name" : "simpleTestTrue",
+  "time" : {
+    "start" : 1498478067863,
+    "stop" : 1498478067879,
+    "duration" : 16
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "481e8776bbe753fa",
+  "name" : "check",
+  "time" : {
+    "start" : 1498478048532,
+    "stop" : 1498478067629,
+    "duration" : 19097
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

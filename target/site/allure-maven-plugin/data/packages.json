@@ -1,0 +1,62 @@
+{
+  "statistic" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 2,
+    "unknown" : 0,
+    "total" : 2
+  },
+  "time" : {
+    "minDuration" : 16,
+    "maxDuration" : 19097,
+    "sumDuration" : 19113,
+    "start" : 1498478048532,
+    "stop" : 1498478067879,
+    "duration" : 19347
+  },
+  "children" : [ {
+    "uid" : "1b3fe21854762bee",
+    "name" : "basicTests.FirstClass",
+    "time" : {
+      "minDuration" : 16,
+      "maxDuration" : 19097,
+      "sumDuration" : 19113,
+      "start" : 1498478048532,
+      "stop" : 1498478067879,
+      "duration" : 19347
+    },
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "bfd0bf2769bd2cb3",
+      "name" : "simpleTestTrue",
+      "time" : {
+        "start" : 1498478067863,
+        "stop" : 1498478067879,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "481e8776bbe753fa",
+      "name" : "check",
+      "time" : {
+        "start" : 1498478048532,
+        "stop" : 1498478067629,
+        "duration" : 19097
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    } ]
+  } ]
+}
