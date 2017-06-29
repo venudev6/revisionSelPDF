@@ -71,12 +71,12 @@
             <scope>test</scope>
         </dependency>
 
-<!--        <dependency>
+        <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
             <version>${hamcrest-all-version}</version>
             <scope>test</scope>
-        </dependency>-->
+        </dependency>
 
         <dependency>
             <groupId>log4j</groupId>
