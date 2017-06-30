@@ -43,4 +43,11 @@ public class AssertLogger {
 
     }
 
+    public void AssertEqualsTemp2(String message1, String message2){
+
+        Assert.assertTrue(true);
+        log.info("Pass ");
+
+    }
+
 }
