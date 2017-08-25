@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite 1" duration-ms="19487" started-at="2017-06-26T11:54:08Z" finished-at="2017-06-26T11:54:27Z">
+  <suite name="Suite 1" duration-ms="22339" started-at="2017-08-25T15:40:42Z" finished-at="2017-08-25T15:41:05Z">
     <groups>
     </groups>
-    <test name="Test 1" duration-ms="19487" started-at="2017-06-26T11:54:08Z" finished-at="2017-06-26T11:54:27Z">
-      <class name="basicTests.FirstClass">
-        <test-method status="PASS" signature="startWebDriver(java.lang.String, java.lang.String)[pri:0, instance:basicTests.FirstClass@8af1c49]" name="startWebDriver" is-config="true" duration-ms="4141" started-at="2017-06-26T17:24:04Z" finished-at="2017-06-26T17:24:08Z">
+    <test name="Test 1" duration-ms="22339" started-at="2017-08-25T15:40:42Z" finished-at="2017-08-25T15:41:05Z">
+      <class name="basicTests.ExtractPDFDataTest">
+        <test-method status="PASS" signature="startWebDriver(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:basicTests.ExtractPDFDataTest@4a4b288a]" name="startWebDriver" is-config="true" duration-ms="5378" started-at="2017-08-25T21:10:37Z" finished-at="2017-08-25T21:10:42Z">
           <params>
             <param index="0">
               <value>
@@ -16,34 +16,43 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://www.pdfpdf.com/samples.html]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startWebDriver -->
-        <test-method status="PASS" signature="startClass()[pri:0, instance:basicTests.FirstClass@8af1c49]" name="startClass" is-config="true" duration-ms="0" started-at="2017-06-26T17:24:08Z" finished-at="2017-06-26T17:24:08Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:basicTests.ExtractPDFDataTest@4a4b288a]" name="setUp" is-config="true" duration-ms="9879" started-at="2017-08-25T21:10:42Z" finished-at="2017-08-25T21:10:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startClass -->
-        <test-method status="PASS" signature="check()[pri:0, instance:basicTests.FirstClass@8af1c49]" name="check" duration-ms="19159" started-at="2017-06-26T17:24:08Z" finished-at="2017-06-26T17:24:27Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="navigateToHomePageTest()[pri:0, instance:basicTests.ExtractPDFDataTest@4a4b288a]" name="navigateToHomePageTest" duration-ms="332" started-at="2017-08-25T21:10:52Z" finished-at="2017-08-25T21:10:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check -->
-        <test-method status="PASS" signature="simpleTestTrue()[pri:0, instance:basicTests.FirstClass@8af1c49]" name="simpleTestTrue" duration-ms="16" started-at="2017-06-26T17:24:27Z" finished-at="2017-06-26T17:24:27Z">
+        </test-method> <!-- navigateToHomePageTest -->
+        <test-method status="PASS" signature="checkPDFPageTest()[pri:0, instance:basicTests.ExtractPDFDataTest@4a4b288a]" name="checkPDFPageTest" duration-ms="2334" started-at="2017-08-25T21:10:53Z" finished-at="2017-08-25T21:10:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- simpleTestTrue -->
-        <test-method status="PASS" signature="endClass()[pri:0, instance:basicTests.FirstClass@8af1c49]" name="endClass" is-config="true" duration-ms="0" started-at="2017-06-26T17:24:27Z" finished-at="2017-06-26T17:24:27Z">
+        </test-method> <!-- checkPDFPageTest -->
+        <test-method status="PASS" signature="extractPDFTextDataTest()[pri:0, instance:basicTests.ExtractPDFDataTest@4a4b288a]" name="extractPDFTextDataTest" duration-ms="9567" started-at="2017-08-25T21:10:55Z" finished-at="2017-08-25T21:11:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endClass -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:basicTests.FirstClass@8af1c49]" name="closeBrowser" is-config="true" duration-ms="2250" started-at="2017-06-26T17:24:28Z" finished-at="2017-06-26T17:24:30Z">
+        </test-method> <!-- extractPDFTextDataTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:basicTests.ExtractPDFDataTest@4a4b288a]" name="tearDown" is-config="true" duration-ms="7" started-at="2017-08-25T21:11:05Z" finished-at="2017-08-25T21:11:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:basicTests.ExtractPDFDataTest@4a4b288a]" name="closeBrowser" is-config="true" duration-ms="1329" started-at="2017-08-25T21:11:05Z" finished-at="2017-08-25T21:11:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- basicTests.FirstClass -->
+      </class> <!-- basicTests.ExtractPDFDataTest -->
     </test> <!-- Test 1 -->
   </suite> <!-- Suite 1 -->
 </testng-results>

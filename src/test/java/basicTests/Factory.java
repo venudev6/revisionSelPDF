@@ -30,6 +30,7 @@ public class Factory{
     MainLogger log = null;
     AssertLogger assertLogger = null;
     String OSName = System.getProperty("os.name");
+    String baseURL = null;
 
 
     public Factory() {
@@ -39,8 +40,8 @@ public class Factory{
 
 
     @BeforeSuite
-    @Parameters({"ifGrid","browser"})
-    public void startWebDriver(String ifGrid, String browser ) throws MalformedURLException {
+    @Parameters({"ifGrid","browser","baseURL"})
+    public void startWebDriver(String ifGrid, String browser, String baseURL ) throws MalformedURLException {
 
         //Checking if Grid
         if(ifGrid.equalsIgnoreCase("true")){
@@ -92,17 +93,21 @@ public class Factory{
 
         driver.manage().window().maximize();
 
-        log = new MainLogger();
+        //log = new MainLogger();
         assertLogger = new AssertLogger();
+        this.baseURL=baseURL;
     }
 
     //Set System properties for chrome
     public void setPropertyChromeDriver() {
 
+        log.info("The chrome system property is being set ");
         //set for windwos
-        if (OSName.toLowerCase().contains("Windows")) {
+        if (OSName.toLowerCase().contains("windows")) {
             setSystemProperty("webdriver.chrome.driver",
                     "\\src\\test\\resources\\win\\chromedriver_win32\\chromedriver.exe");
+            log.info("The chrome system property is set successfuly.");
+            return;
         }
 
         //check for linux
@@ -113,13 +118,14 @@ public class Factory{
             } else
                 setSystemProperty("webdriver.chrome.driver",
                         "\\src\\test\\resources\\linux\\chromedriver_linux32\\chromedriver.exe");
-
+            return;
         }
 
         //check for mac
         if (OSName.toLowerCase().contains("Mac")) {
             setSystemProperty("webdriver.chrome.driver",
                     "\\src\\test\\resources\\mac\\chromedriver_mac64\\chromedriver.exe");
+            return;
         }
 
     }

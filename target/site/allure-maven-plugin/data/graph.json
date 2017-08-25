@@ -1,20 +1,30 @@
 [ {
-  "uid" : "bfd0bf2769bd2cb3",
-  "name" : "simpleTestTrue",
+  "uid" : "604942268e18decc",
+  "name" : "extractPDFTextDataTest",
   "time" : {
-    "start" : 1498478067863,
-    "stop" : 1498478067879,
-    "duration" : 16
+    "start" : 1503675655635,
+    "stop" : 1503675665202,
+    "duration" : 9567
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "481e8776bbe753fa",
-  "name" : "check",
+  "uid" : "726014b3df2aad6e",
+  "name" : "checkPDFPageTest",
   "time" : {
-    "start" : 1498478048532,
-    "stop" : 1498478067629,
-    "duration" : 19097
+    "start" : 1503675653298,
+    "stop" : 1503675655630,
+    "duration" : 2332
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e4909cd5215076ac",
+  "name" : "navigateToHomePageTest",
+  "time" : {
+    "start" : 1503675652903,
+    "stop" : 1503675653151,
+    "duration" : 248
   },
   "status" : "passed",
   "severity" : "normal"

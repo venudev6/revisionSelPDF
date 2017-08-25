@@ -1,5 +1,6 @@
 package basicTests;
 
+import config.MainLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -19,6 +20,7 @@ public class FirstClass extends Factory {
 
     public FirstClass(){
         super();
+        log = new MainLogger(this.getClass().getName());
     }
 
     @BeforeClass
@@ -32,7 +34,7 @@ public class FirstClass extends Factory {
     @Test
     public void check(){
         log.info("This is a sample test"+ System.getProperty("user.dir"));
-        driver.get("https://www.google.com");
+        driver.get(baseURL);
 
     }
 

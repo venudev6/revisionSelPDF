@@ -22,6 +22,7 @@
         <hamcrest-all-version>1.3</hamcrest-all-version>
         <slf4j-simple-version>1.7.21</slf4j-simple-version>
         <maven-surefire-plugin-version>2.18.1</maven-surefire-plugin-version>
+        <pdfbox-version>2.0.4</pdfbox-version>
     </properties>
 
 
@@ -91,6 +92,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>${pdfbox-version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -106,7 +114,7 @@
                     </argLine>
 
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/xml/testng.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/xml/testngPDFCheck.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
                 </configuration>

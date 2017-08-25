@@ -3,96 +3,107 @@
     "failed" : 0,
     "broken" : 0,
     "skipped" : 0,
-    "passed" : 2,
+    "passed" : 3,
     "unknown" : 0,
-    "total" : 2
+    "total" : 3
   },
   "time" : {
-    "minDuration" : 16,
-    "maxDuration" : 19097,
-    "sumDuration" : 19113,
-    "start" : 1498478048532,
-    "stop" : 1498478067879,
-    "duration" : 19347
+    "minDuration" : 248,
+    "maxDuration" : 9567,
+    "sumDuration" : 12147,
+    "start" : 1503675652903,
+    "stop" : 1503675665202,
+    "duration" : 12299
   },
   "children" : [ {
-    "uid" : "eb20986bb28aefed",
+    "uid" : "a79fa635e4427bcd",
     "name" : "Suite 1",
     "time" : {
-      "minDuration" : 16,
-      "maxDuration" : 19097,
-      "sumDuration" : 19113,
-      "start" : 1498478048532,
-      "stop" : 1498478067879,
-      "duration" : 19347
+      "minDuration" : 248,
+      "maxDuration" : 9567,
+      "sumDuration" : 12147,
+      "start" : 1503675652903,
+      "stop" : 1503675665202,
+      "duration" : 12299
     },
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 2
+      "total" : 3
     },
     "type" : "TestGroupNode",
     "children" : [ {
-      "uid" : "cc4512eee5b0aa51",
+      "uid" : "8d800220ec812bcc",
       "name" : "Test 1",
       "time" : {
-        "minDuration" : 16,
-        "maxDuration" : 19097,
-        "sumDuration" : 19113,
-        "start" : 1498478048532,
-        "stop" : 1498478067879,
-        "duration" : 19347
+        "minDuration" : 248,
+        "maxDuration" : 9567,
+        "sumDuration" : 12147,
+        "start" : 1503675652903,
+        "stop" : 1503675665202,
+        "duration" : 12299
       },
       "statistic" : {
         "failed" : 0,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 2,
+        "passed" : 3,
         "unknown" : 0,
-        "total" : 2
+        "total" : 3
       },
       "type" : "TestGroupNode",
       "children" : [ {
-        "uid" : "3ab44fb9ba1e0f1b",
-        "name" : "basicTests.FirstClass",
+        "uid" : "97c8159afcdd76b3",
+        "name" : "basicTests.ExtractPDFDataTest",
         "time" : {
-          "minDuration" : 16,
-          "maxDuration" : 19097,
-          "sumDuration" : 19113,
-          "start" : 1498478048532,
-          "stop" : 1498478067879,
-          "duration" : 19347
+          "minDuration" : 248,
+          "maxDuration" : 9567,
+          "sumDuration" : 12147,
+          "start" : 1503675652903,
+          "stop" : 1503675665202,
+          "duration" : 12299
         },
         "statistic" : {
           "failed" : 0,
           "broken" : 0,
           "skipped" : 0,
-          "passed" : 2,
+          "passed" : 3,
           "unknown" : 0,
-          "total" : 2
+          "total" : 3
         },
         "type" : "TestGroupNode",
         "children" : [ {
-          "uid" : "bfd0bf2769bd2cb3",
-          "name" : "simpleTestTrue",
+          "uid" : "604942268e18decc",
+          "name" : "extractPDFTextDataTest",
           "time" : {
-            "start" : 1498478067863,
-            "stop" : 1498478067879,
-            "duration" : 16
+            "start" : 1503675655635,
+            "stop" : 1503675665202,
+            "duration" : 9567
           },
           "status" : "passed",
           "flaky" : false,
           "type" : "TestCaseNode"
         }, {
-          "uid" : "481e8776bbe753fa",
-          "name" : "check",
+          "uid" : "726014b3df2aad6e",
+          "name" : "checkPDFPageTest",
           "time" : {
-            "start" : 1498478048532,
-            "stop" : 1498478067629,
-            "duration" : 19097
+            "start" : 1503675653298,
+            "stop" : 1503675655630,
+            "duration" : 2332
+          },
+          "status" : "passed",
+          "flaky" : false,
+          "type" : "TestCaseNode"
+        }, {
+          "uid" : "e4909cd5215076ac",
+          "name" : "navigateToHomePageTest",
+          "time" : {
+            "start" : 1503675652903,
+            "stop" : 1503675653151,
+            "duration" : 248
           },
           "status" : "passed",
           "flaky" : false,

@@ -9,16 +9,15 @@ import org.slf4j.LoggerFactory;
  */
 public class MainLogger {
 
-    Logger logger  = LoggerFactory.getLogger(this.getClass().getName());
+    Logger logger  = null;
+
+    public MainLogger(String classNameToDisplay){
+        logger  = LoggerFactory.getLogger(classNameToDisplay);
+    }
 
      Logger getLogger(){
 
         return logger;
-    }
-
-     public MainLogger(){
-
-        this.logger=logger;
     }
 
     public void debug(String message){

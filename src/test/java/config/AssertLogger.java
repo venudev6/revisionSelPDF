@@ -8,7 +8,7 @@ import org.testng.Assert;
 public class AssertLogger {
 
 
-    MainLogger log = new MainLogger();
+    MainLogger log = new MainLogger(this.getClass().getName());
     Exception e;
 
     public void AssertTrue(String message){
@@ -16,6 +16,16 @@ public class AssertLogger {
         Assert.assertTrue(true);
         log.info("Pass ");
 
+    }
+
+    public void AssertFail(String message){
+
+        try {
+            Assert.assertFalse(true);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        log.error("Fail ",e);
     }
 
     public void AssertFalse(String message){

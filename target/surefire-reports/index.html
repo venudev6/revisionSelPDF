@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite_1">
-                    <span>F:\dev\selenium\revisionSel\src\test\xml\testng.xml</span>
+                    <span>F:\dev\selenium\revisionSel\src\test\xml\testngPDFCheck.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +101,17 @@
                     <div class="method-list-content passed suite-Suite_1">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_1" title="basicTests.FirstClass" hash-for-method="check">check</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_1" title="basicTests.ExtractPDFDataTest" hash-for-method="checkPDFPageTest">checkPDFPageTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_1" title="basicTests.FirstClass" hash-for-method="simpleTestTrue">simpleTestTrue</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_1" title="basicTests.ExtractPDFDataTest" hash-for-method="extractPDFTextDataTest">extractPDFTextDataTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_1" title="basicTests.ExtractPDFDataTest" hash-for-method="navigateToHomePageTest">navigateToHomePageTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite_1 -->
@@ -124,21 +129,28 @@
           <div class="suite-Suite_1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">basicTests.FirstClass</span>
+              <span class="class-name">basicTests.ExtractPDFDataTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="check">
-                  </a> <!-- check -->
-                  <span class="method-name">check</span>
+                  <a name="checkPDFPageTest">
+                  </a> <!-- checkPDFPageTest -->
+                  <span class="method-name">checkPDFPageTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="simpleTestTrue">
-                  </a> <!-- simpleTestTrue -->
-                  <span class="method-name">simpleTestTrue</span>
+                  <a name="extractPDFTextDataTest">
+                  </a> <!-- extractPDFTextDataTest -->
+                  <span class="method-name">extractPDFTextDataTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigateToHomePageTest">
+                  </a> <!-- navigateToHomePageTest -->
+                  <span class="method-name">navigateToHomePageTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,18 +158,19 @@
         </div> <!-- panel Suite_1 -->
         <div panel-name="test-xml-Suite_1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">F:\dev\selenium\revisionSel\src\test\xml\testng.xml</span>
+            <span class="header-content">F:\dev\selenium\revisionSel\src\test\xml\testngPDFCheck.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite verbose=&quot;0&quot; name=&quot;Suite 1&quot;&gt;
-  &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
+  &lt;parameter name=&quot;baseURL&quot; value=&quot;http://www.pdfpdf.com/samples.html&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;parameter name=&quot;ifGrid&quot; value=&quot;false&quot;/&gt;
   &lt;test name=&quot;Test 1&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;basicTests.FirstClass&quot;/&gt;
+      &lt;class name=&quot;basicTests.ExtractPDFDataTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test 1 --&gt;
 &lt;/suite&gt; &lt;!-- Suite 1 --&gt;
@@ -197,20 +210,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'check')
-data.setCell(0, 2, 'basicTests.FirstClass')
-data.setCell(0, 3, 19159);
+data.setCell(0, 1, 'extractPDFTextDataTest')
+data.setCell(0, 2, 'basicTests.ExtractPDFDataTest')
+data.setCell(0, 3, 9567);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'simpleTestTrue')
-data.setCell(1, 2, 'basicTests.FirstClass')
-data.setCell(1, 3, 16);
+data.setCell(1, 1, 'checkPDFPageTest')
+data.setCell(1, 2, 'basicTests.ExtractPDFDataTest')
+data.setCell(1, 3, 2334);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'navigateToHomePageTest')
+data.setCell(2, 2, 'basicTests.ExtractPDFDataTest')
+data.setCell(2, 3, 332);
 window.suiteTableData['Suite_1']= { tableData: data, tableDiv: 'times-div-Suite_1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Suite_1">
               </div> <!-- times-div-Suite_1 -->
             </div> <!-- times-div -->
@@ -236,30 +253,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">basicTests.FirstClass</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">basicTests.ExtractPDFDataTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">startWebDriver(false, edge)</span>
+                <span class="method-name">startWebDriver(false, chrome, http://www.pdfpdf.com/samples.html)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">startClass</span>
-                <span class="method-start">4173 ms</span>
+                <span class="method-name">setUp</span>
+                <span class="method-start">5414 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">check</span>
-                <span class="method-start">4188 ms</span>
+                <span class="method-name">navigateToHomePageTest</span>
+                <span class="method-start">15321 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">simpleTestTrue</span>
-                <span class="method-start">23597 ms</span>
+                <span class="method-name">checkPDFPageTest</span>
+                <span class="method-start">15800 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">extractPDFTextDataTest</span>
+                <span class="method-start">18138 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <span class="method-name">endClass</span>
-                <span class="method-start">23628 ms</span>
+                <span class="method-name">tearDown</span>
+                <span class="method-start">27709 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">23988 ms</span>
+                <span class="method-start">27988 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
