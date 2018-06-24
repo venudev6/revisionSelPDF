@@ -12,7 +12,9 @@ public class BasePage implements IConfigurable {
     protected long pageLoadStartTime;
     protected long pageLoadEndTime;
     protected final int PAGETIMEOUT =15;
+    protected final int AJAXPAGETIMEOUT=30;
     protected UIUtility uiUtility=null;
+    WebDriver driver;
 
     public BasePage(WebDriver driver){
 

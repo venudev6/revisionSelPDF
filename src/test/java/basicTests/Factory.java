@@ -26,16 +26,19 @@ import java.net.URL;
 public class Factory{
 
     DesiredCapabilities desiredCapabilities = null;
-    WebDriver driver = null;
-    MainLogger log = null;
+    public WebDriver driver = null;
+    public MainLogger log = null;
     AssertLogger assertLogger = null;
     String OSName = System.getProperty("os.name");
-    String baseURL = null;
+    //String sysSep = System.getProperty("file.separator");
+    public String baseURL = null;
 
 
     public Factory() {
         this.driver = driver;
         this.desiredCapabilities = desiredCapabilities;
+        System.out.println("The class name is : "+this.getClass().getSuperclass().getName());
+        this.log = new MainLogger(this.getClass().getSuperclass().getName());
     }
 
 
@@ -75,6 +78,10 @@ public class Factory{
             }
 
             else if(browser.equalsIgnoreCase("ie") || browser.equalsIgnoreCase("internet explorer")) {
+                if(!OSName.toLowerCase().contains("win")) {
+                    log.error("Cannot run tests for IE in a linux system",new Exception());
+                    System.exit(1);
+                }
                 setPropertyIEDriver();
                 driver = new InternetExplorerDriver();
             }
@@ -98,10 +105,13 @@ public class Factory{
         this.baseURL=baseURL;
     }
 
+
+
+
     //Set System properties for chrome
     public void setPropertyChromeDriver() {
 
-        log.info("The chrome system property is being set ");
+        this.log.info("The chrome system property is being set ");
         //set for windwos
         if (OSName.toLowerCase().contains("windows")) {
             setSystemProperty("webdriver.chrome.driver",
@@ -112,23 +122,27 @@ public class Factory{
 
         //check for linux
         if (OSName.toLowerCase().contains("linux")) {
+            this.log.info("The OS is : "+OSName);
             if(checkOSBitType(getOSArch("getconf LONG_BIT"),"64")){
                 setSystemProperty("webdriver.chrome.driver",
-                        "\\src\\test\\resources\\linux\\chromedriver_linux64\\chromedriver.exe");
+                        "/src/test/resources/linux/chromedriver_linux64/chromedriver");
             } else
-                setSystemProperty("webdriver.chrome.driver",
-                        "\\src\\test\\resources\\linux\\chromedriver_linux32\\chromedriver.exe");
+               setSystemProperty("webdriver.chrome.driver",
+                        "/src/test/resources/linux/chromedriver_linux32/chromedriver");
             return;
         }
 
         //check for mac
         if (OSName.toLowerCase().contains("Mac")) {
             setSystemProperty("webdriver.chrome.driver",
-                    "\\src\\test\\resources\\mac\\chromedriver_mac64\\chromedriver.exe");
+                    "/src/test/resources/mac/chromedriver_mac64/chromedriver");
             return;
         }
 
     }
+
+
+
 
     //Set System properties for Fireofox
     public void setPropertyFirefoxDriver() {
@@ -145,15 +159,15 @@ public class Factory{
         if (OSName.toLowerCase().contains("linux")) {
             if(checkOSBitType(getOSArch("getconf LONG_BIT"),"64")){
                 setSystemProperty("webdriver.gecko.driver",
-                        "\\src\\test\\resources\\linux\\geckodriver-v0.17.0-linux64\\geckodriver.exe");
+                        "/src/test/resources/linux/geckodriver-v0.17.0-linux64/geckodriver");
             } else
                 setSystemProperty("webdriver.gecko.driver",
-                        "\\src\\test\\resources\\linux\\geckodriver-v0.17.0-linux32\\geckodriver.exe");
+                        "/src/test/resources/linux/geckodriver-v0.17.0-linux32/geckodriver");
         }
         //check for mac
         if (OSName.toLowerCase().contains("Mac")) {
             setSystemProperty("webdriver.gecko.driver",
-                    "\\src\\test\\resources\\mac\\geckodriver-v0.17.0-macos\\geckodriver.exe");
+                    "/src/test/resources/linux/geckodriver-v0.17.0-macos/geckodriver");
         }
 
     }
@@ -161,6 +175,7 @@ public class Factory{
 
     //Set System properties for IE
     public void setPropertyIEDriver() {
+
 
         if(checkOSBitType(getOSArch("wmic os get osarchitecture"),"64")){
                 setSystemProperty("webdriver.ie.driver",
@@ -224,7 +239,7 @@ public class Factory{
             }
             else
                 driver.quit();
-        }catch (Exception e) {e.printStackTrace();}
+        }catch (Exception e) {}
     }
 
 

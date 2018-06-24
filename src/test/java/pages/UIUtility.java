@@ -18,6 +18,7 @@ import java.util.NoSuchElementException;
 public class UIUtility {
 
     WebDriver driver = null;
+    Integer  defaultPageTimeOut = 15;
 
     public UIUtility(WebDriver driver){
         this.driver =driver;
@@ -38,6 +39,7 @@ public class UIUtility {
         try {
             new WebDriverWait(driver, timeout).until(ExpectedConditions
                     .visibilityOf(element));
+            log.info("Element :"+element.toString()+" is found successfully.");
             return true;
         } catch (NoSuchElementException e) {
             return false;
@@ -51,7 +53,7 @@ public class UIUtility {
      */
     public boolean safeClick(WebElement element) {
         try {
-            safeWaitForElementVisibility(15,element);
+            safeWaitForElementVisibility(defaultPageTimeOut,element);
             element.click();
             sleep(1000);
             return true;
@@ -123,6 +125,42 @@ public class UIUtility {
         }
 
         return parsedText;
+    }
+
+
+    /**
+     * Safe Enter Text.
+     *
+     * @param element WebElement
+     * @param inputText String to be entered into the field
+     */
+    public boolean safeSendKeys(WebElement element,String inputText) {
+        return safeSendKeys(element,inputText,defaultPageTimeOut);
+    }
+
+    /**
+     * Safe send keys with specified timeout.
+     *
+     * @param element web element
+     * @param inputText String to be entered into the field
+     * @param timeOutInSecs time out in seconds
+     */
+    public boolean safeSendKeys(WebElement element,String inputText,Integer timeOutInSecs) {
+        try {
+            safeWaitForElementVisibility(timeOutInSecs,element);
+            element.sendKeys(inputText);
+            sleep(1000);
+            return true;
+        } catch (NoSuchElementException e) {
+            // GetScreenshot.takeScreenShot(driver);
+            check.AssertFail("Unable to find the element " + e.getMessage());
+            return false;
+        } catch (Exception e) {
+            // GetScreenshot.takeScreenShot(driver);
+            e.printStackTrace();
+            check.AssertFail("Unable to click on the element"+ e.getMessage());
+            return false;
+        }
     }
 
 }

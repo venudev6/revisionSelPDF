@@ -1,14 +1,12 @@
 package basicTests;
 
 import config.MainLogger;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.PDFPDF.PDFDocPage;
 import pages.PDFPDF.PDFPDFHomePage;
 
-import java.util.Set;
 
 /**
  * Created by sivar on 12-06-2017.

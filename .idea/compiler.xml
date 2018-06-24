@@ -9,8 +9,5 @@
         <module name="revisionSel" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="revisionSel" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
